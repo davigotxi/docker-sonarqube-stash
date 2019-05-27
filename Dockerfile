@@ -4,4 +4,4 @@ FROM sonarqube:6.7-community
 
 ADD plugins/sonar-stash-plugin-1.6.0.jar /opt/sonarqube/extensions/plugins/sonar-stash-plugin-1.6.0.jar
 
-ENTRYPOINT ["./bin/run/sh"]
+ENTRYPOINT ["./bin/run.sh"]
