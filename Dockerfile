@@ -3,8 +3,7 @@
 FROM sonarqube:6.7-community
 
 USER root
-COPY plugins/sonar-stash-plugin-1.6.0.jar /opt/sonarqube/extensions/plugins/sonar-stash-plugin-1.6.0.jar
-RUN chown sonarqube:sonarqube /opt/sonarqube/extensions/plugins/*
+COPY --chown=sonarqube:sonarqube plugins/* /opt/sonarqube/extensions/plugins/
 USER sonarqube
 
 ENTRYPOINT ["./bin/run.sh"]
